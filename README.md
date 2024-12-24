@@ -34,7 +34,6 @@ License
       - [Share Emails API]()
       - [Calls Preference API]()
       - [Data Sharing Settings API]()
-      - [Related List count API]()
       - [Fetch Full Data API]()
 
      
