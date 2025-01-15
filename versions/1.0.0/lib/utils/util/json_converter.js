@@ -97,7 +97,14 @@ class JSONConverter extends Converter {
             requiredInUpdateKeys.delete(keyName);
           }
         }
-        requestJSON[keyName] = await this.setData(memberDetail, fieldValue).catch((err) => {throw err;});
+        if(keyName.toLowerCase() === Constants.BODY.toLowerCase() && this.commonAPIHandler.getAPIPath().endsWith(Constants.FUNCTIONS_PATH) && this.commonAPIHandler.getAPIPath().includes(Constants.FUNCTIONS))
+        {
+          return await this.setData(memberDetail, fieldValue);
+        }
+        else
+        {
+          requestJSON[keyName] = await this.setData(memberDetail, fieldValue).catch((err) => {throw err;});
+        }
       }
     }
     if (skipMandatory || this.checkException(classMemberName, requestInstance, instanceNumber, lookUp, requiredKeys, primaryKeys, requiredInUpdateKeys) === true) {

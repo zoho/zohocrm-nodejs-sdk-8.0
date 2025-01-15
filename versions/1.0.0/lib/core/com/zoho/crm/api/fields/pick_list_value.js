@@ -20,6 +20,7 @@ class PickListValue{
 	maps;
 	delete1;
 	showValue;
+	globalPicklistValue;
 	keyModified = new Map();
 	/**
 	 * The method to get the colourCode
@@ -371,6 +372,29 @@ class PickListValue{
 		}
 		this.showValue = showValue;
 		this.keyModified.set("show_value", 1);
+
+	}
+
+	/**
+	 * The method to get the globalPicklistValue
+	 * @returns {Picklist} An instance of Picklist
+	 */
+	getGlobalPicklistValue()	{
+		return this.globalPicklistValue;
+
+	}
+
+	/**
+	 * The method to set the value to globalPicklistValue
+	 * @param {Picklist} globalPicklistValue An instance of Picklist
+	 */
+	async setGlobalPicklistValue(globalPicklistValue)	{
+		const Picklist = (await (import("../global_picklists/picklist.js"))).MasterModel;
+		if((globalPicklistValue != null) && (!(globalPicklistValue instanceof Picklist)))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: globalPicklistValue EXPECTED TYPE: Picklist", null, null);
+		}
+		this.globalPicklistValue = globalPicklistValue;
+		this.keyModified.set("_global_picklist_value", 1);
 
 	}
 

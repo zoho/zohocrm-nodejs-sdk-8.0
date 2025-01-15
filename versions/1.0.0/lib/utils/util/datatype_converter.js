@@ -68,8 +68,12 @@ class DatatypeConverter {
         return obj;
     }
 
+    static isAssoc(array) {
+        return Array.isArray(array) && array.some((value, index) => index.toString() !== value.toString());
+    }
+
     static postConvertObjectData(obj) {
-        if (Array.isArray(obj) && obj.length > 0) {
+        if (Array.isArray(obj) && obj.length > 0 && !this.isAssoc(obj)) {
             let list = [];
             for (let data of obj) {
                 if (data instanceof Date) {
@@ -88,6 +92,28 @@ class DatatypeConverter {
                 }
             }
             return list;
+        }
+        else if (Array.isArray(obj) && this.isAssoc(obj) && Object.keys(obj).length > 0) {
+            const requestObject = {};
+            for (const [keyName, keyValue] of Object.entries(obj)) {
+                if (Array.isArray(keyValue)) {
+                    requestObject[keyName] = this.postConvertObjectData(keyValue);
+                } else if (keyValue instanceof Date) {
+                    if (
+                        keyValue.getHours() === 0 &&
+                        keyValue.getMinutes() === 0 &&
+                        keyValue.getSeconds() === 0 &&
+                        keyValue.getMilliseconds() === 0
+                    ) {
+                        requestObject[keyName] = this.postConvert(keyValue, Constants.DATE_NAMESPACE.toLowerCase());
+                    } else {
+                        requestObject[keyName] = this.postConvert(keyValue, Constants.DATETIME_NAMESPACE.toLowerCase());
+                    }
+                } else {
+                    requestObject[keyName] = keyValue;
+                }
+            }
+            return requestObject;
         }
         else if (obj instanceof Map) {
             let requestObject = {};

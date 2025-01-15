@@ -8,7 +8,7 @@ class AssociationDetails{
 	keyModified = new Map();
 	/**
 	 * The method to get the relatedField
-	 * @returns {MinifiedModule} An instance of MinifiedModule
+	 * @returns {LookupField} An instance of LookupField
 	 */
 	getRelatedField()	{
 		return this.relatedField;
@@ -17,12 +17,12 @@ class AssociationDetails{
 
 	/**
 	 * The method to set the value to relatedField
-	 * @param {MinifiedModule} relatedField An instance of MinifiedModule
+	 * @param {LookupField} relatedField An instance of LookupField
 	 */
 	async setRelatedField(relatedField)	{
-		const MinifiedModule = (await (import("../modules/minified_module.js"))).MasterModel;
-		if((relatedField != null) && (!(relatedField instanceof MinifiedModule)))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: relatedField EXPECTED TYPE: MinifiedModule", null, null);
+		const LookupField = (await (import("./lookup_field.js"))).MasterModel;
+		if((relatedField != null) && (!(relatedField instanceof LookupField)))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: relatedField EXPECTED TYPE: LookupField", null, null);
 		}
 		this.relatedField = relatedField;
 		this.keyModified.set("related_field", 1);
@@ -31,7 +31,7 @@ class AssociationDetails{
 
 	/**
 	 * The method to get the lookupField
-	 * @returns {MinifiedModule} An instance of MinifiedModule
+	 * @returns {LookupField} An instance of LookupField
 	 */
 	getLookupField()	{
 		return this.lookupField;
@@ -40,12 +40,12 @@ class AssociationDetails{
 
 	/**
 	 * The method to set the value to lookupField
-	 * @param {MinifiedModule} lookupField An instance of MinifiedModule
+	 * @param {LookupField} lookupField An instance of LookupField
 	 */
 	async setLookupField(lookupField)	{
-		const MinifiedModule = (await (import("../modules/minified_module.js"))).MasterModel;
-		if((lookupField != null) && (!(lookupField instanceof MinifiedModule)))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: lookupField EXPECTED TYPE: MinifiedModule", null, null);
+		const LookupField = (await (import("./lookup_field.js"))).MasterModel;
+		if((lookupField != null) && (!(lookupField instanceof LookupField)))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: lookupField EXPECTED TYPE: LookupField", null, null);
 		}
 		this.lookupField = lookupField;
 		this.keyModified.set("lookup_field", 1);

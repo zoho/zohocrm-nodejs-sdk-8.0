@@ -8,6 +8,7 @@ class Attachment{
 	createdBy;
 	parentId;
 	sharingPermission;
+	recordStatusS;
 	attachmentType;
 	id;
 	modifiedTime;
@@ -20,6 +21,10 @@ class Attachment{
 	seModule;
 	state;
 	linkUrl;
+	attachmentSourceS;
+	fileIdS;
+	fieldStates;
+	ziaVisions;
 	keyModified = new Map();
 	/**
 	 * The method to get the owner
@@ -132,6 +137,28 @@ class Attachment{
 		}
 		this.sharingPermission = sharingPermission;
 		this.keyModified.set("$sharing_permission", 1);
+
+	}
+
+	/**
+	 * The method to get the recordStatusS
+	 * @returns {String} A String representing the recordStatusS
+	 */
+	getRecordStatusS()	{
+		return this.recordStatusS;
+
+	}
+
+	/**
+	 * The method to set the value to recordStatusS
+	 * @param {String} recordStatusS A String representing the recordStatusS
+	 */
+	setRecordStatusS(recordStatusS)	{
+		if((recordStatusS != null) && (!(Object.prototype.toString.call(recordStatusS) == "[object String]")))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: recordStatusS EXPECTED TYPE: String", null, null);
+		}
+		this.recordStatusS = recordStatusS;
+		this.keyModified.set("Record_Status__s", 1);
 
 	}
 
@@ -396,6 +423,94 @@ class Attachment{
 		}
 		this.linkUrl = linkUrl;
 		this.keyModified.set("$link_url", 1);
+
+	}
+
+	/**
+	 * The method to get the attachmentSourceS
+	 * @returns {String} A String representing the attachmentSourceS
+	 */
+	getAttachmentSourceS()	{
+		return this.attachmentSourceS;
+
+	}
+
+	/**
+	 * The method to set the value to attachmentSourceS
+	 * @param {String} attachmentSourceS A String representing the attachmentSourceS
+	 */
+	setAttachmentSourceS(attachmentSourceS)	{
+		if((attachmentSourceS != null) && (!(Object.prototype.toString.call(attachmentSourceS) == "[object String]")))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: attachmentSourceS EXPECTED TYPE: String", null, null);
+		}
+		this.attachmentSourceS = attachmentSourceS;
+		this.keyModified.set("Attachment_Source__s", 1);
+
+	}
+
+	/**
+	 * The method to get the fileIdS
+	 * @returns {String} A String representing the fileIdS
+	 */
+	getFileIdS()	{
+		return this.fileIdS;
+
+	}
+
+	/**
+	 * The method to set the value to fileIdS
+	 * @param {String} fileIdS A String representing the fileIdS
+	 */
+	setFileIdS(fileIdS)	{
+		if((fileIdS != null) && (!(Object.prototype.toString.call(fileIdS) == "[object String]")))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: fileIdS EXPECTED TYPE: String", null, null);
+		}
+		this.fileIdS = fileIdS;
+		this.keyModified.set("File_Id__s", 1);
+
+	}
+
+	/**
+	 * The method to get the fieldStates
+	 * @returns {String} A String representing the fieldStates
+	 */
+	getFieldStates()	{
+		return this.fieldStates;
+
+	}
+
+	/**
+	 * The method to set the value to fieldStates
+	 * @param {String} fieldStates A String representing the fieldStates
+	 */
+	setFieldStates(fieldStates)	{
+		if((fieldStates != null) && (!(Object.prototype.toString.call(fieldStates) == "[object String]")))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: fieldStates EXPECTED TYPE: String", null, null);
+		}
+		this.fieldStates = fieldStates;
+		this.keyModified.set("$field_states", 1);
+
+	}
+
+	/**
+	 * The method to get the ziaVisions
+	 * @returns {String} A String representing the ziaVisions
+	 */
+	getZiaVisions()	{
+		return this.ziaVisions;
+
+	}
+
+	/**
+	 * The method to set the value to ziaVisions
+	 * @param {String} ziaVisions A String representing the ziaVisions
+	 */
+	setZiaVisions(ziaVisions)	{
+		if((ziaVisions != null) && (!(Object.prototype.toString.call(ziaVisions) == "[object String]")))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: ziaVisions EXPECTED TYPE: String", null, null);
+		}
+		this.ziaVisions = ziaVisions;
+		this.keyModified.set("$zia_visions", 1);
 
 	}
 

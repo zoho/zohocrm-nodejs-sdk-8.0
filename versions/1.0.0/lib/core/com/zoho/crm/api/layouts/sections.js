@@ -5,6 +5,7 @@ class Sections{
 
 	displayLabel;
 	sequenceNumber;
+	actionsAllowed;
 	issubformsection;
 	tabTraversal;
 	apiName;
@@ -58,6 +59,29 @@ class Sections{
 		}
 		this.sequenceNumber = sequenceNumber;
 		this.keyModified.set("sequence_number", 1);
+
+	}
+
+	/**
+	 * The method to get the actionsAllowed
+	 * @returns {ActionsAllowed} An instance of ActionsAllowed
+	 */
+	getActionsAllowed()	{
+		return this.actionsAllowed;
+
+	}
+
+	/**
+	 * The method to set the value to actionsAllowed
+	 * @param {ActionsAllowed} actionsAllowed An instance of ActionsAllowed
+	 */
+	async setActionsAllowed(actionsAllowed)	{
+		const ActionsAllowed = (await (import("./actions_allowed.js"))).MasterModel;
+		if((actionsAllowed != null) && (!(actionsAllowed instanceof ActionsAllowed)))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: actionsAllowed EXPECTED TYPE: ActionsAllowed", null, null);
+		}
+		this.actionsAllowed = actionsAllowed;
+		this.keyModified.set("actions_allowed", 1);
 
 	}
 

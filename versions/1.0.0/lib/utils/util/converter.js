@@ -108,6 +108,13 @@ class Converter {
 					if(sub_type.toLowerCase() == Constants.OBJECT_KEY) {
 						check = true;
 					}
+					else if (subType.hasOwnProperty(Constants.SUB_TYPE_1)) {
+						const subType1 = subType[Constants.SUB_TYPE_1];
+						const sub_type1 = subType1[Constants.TYPE];
+						if (sub_type1.toLowerCase() === Constants.OBJECT_KEY) {
+							check = true;
+						}
+					}
 					else {
 						dataType = Constants.SPECIAL_TYPES.has(sub_type.toLowerCase()) ? Constants.SPECIAL_TYPES.get(sub_type.toLowerCase()) : sub_type;
 						if (Constants.TYPE_VS_DATATYPE.has(dataType.toLowerCase())) {

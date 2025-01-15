@@ -6,8 +6,8 @@ class Profiles{
 	default1;
 	name;
 	id;
-	defaultview;
-	defaultassignmentview;
+	defaultView;
+	defaultAssignmentView;
 	keyModified = new Map();
 	/**
 	 * The method to get the default
@@ -76,47 +76,47 @@ class Profiles{
 	}
 
 	/**
-	 * The method to get the defaultview
+	 * The method to get the defaultView
 	 * @returns {DefaultView} An instance of DefaultView
 	 */
-	getDefaultview()	{
-		return this.defaultview;
+	getDefaultView()	{
+		return this.defaultView;
 
 	}
 
 	/**
-	 * The method to set the value to defaultview
-	 * @param {DefaultView} defaultview An instance of DefaultView
+	 * The method to set the value to defaultView
+	 * @param {DefaultView} defaultView An instance of DefaultView
 	 */
-	async setDefaultview(defaultview)	{
+	async setDefaultView(defaultView)	{
 		const DefaultView = (await (import("./default_view.js"))).MasterModel;
-		if((defaultview != null) && (!(defaultview instanceof DefaultView)))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: defaultview EXPECTED TYPE: DefaultView", null, null);
+		if((defaultView != null) && (!(defaultView instanceof DefaultView)))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: defaultView EXPECTED TYPE: DefaultView", null, null);
 		}
-		this.defaultview = defaultview;
+		this.defaultView = defaultView;
 		this.keyModified.set("_default_view", 1);
 
 	}
 
 	/**
-	 * The method to get the defaultassignmentview
+	 * The method to get the defaultAssignmentView
 	 * @returns {DefaultAssignmentView} An instance of DefaultAssignmentView
 	 */
-	getDefaultassignmentview()	{
-		return this.defaultassignmentview;
+	getDefaultAssignmentView()	{
+		return this.defaultAssignmentView;
 
 	}
 
 	/**
-	 * The method to set the value to defaultassignmentview
-	 * @param {DefaultAssignmentView} defaultassignmentview An instance of DefaultAssignmentView
+	 * The method to set the value to defaultAssignmentView
+	 * @param {DefaultAssignmentView} defaultAssignmentView An instance of DefaultAssignmentView
 	 */
-	async setDefaultassignmentview(defaultassignmentview)	{
+	async setDefaultAssignmentView(defaultAssignmentView)	{
 		const DefaultAssignmentView = (await (import("./default_assignment_view.js"))).MasterModel;
-		if((defaultassignmentview != null) && (!(defaultassignmentview instanceof DefaultAssignmentView)))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: defaultassignmentview EXPECTED TYPE: DefaultAssignmentView", null, null);
+		if((defaultAssignmentView != null) && (!(defaultAssignmentView instanceof DefaultAssignmentView)))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: defaultAssignmentView EXPECTED TYPE: DefaultAssignmentView", null, null);
 		}
-		this.defaultassignmentview = defaultassignmentview;
+		this.defaultAssignmentView = defaultAssignmentView;
 		this.keyModified.set("_default_assignment_view", 1);
 
 	}

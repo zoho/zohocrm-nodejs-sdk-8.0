@@ -40,6 +40,7 @@ class DataCenter {
         const CNDataCenter = (await import("./cn_data_center.js")).MasterModel;
         const AUDataCenter = (await import("./au_data_center.js")).MasterModel;
         const CADataCenter = (await import("./ca_data_center.js")).MasterModel;
+        const SADataCenter = (await import("./sa_data_center.js")).MasterModel;
         const Constants = (await import("../../utils/util/constants.js")).MasterModel;
         if (Constants.US_DATACENTER.some(a => a === config)) {
             if (config.includes(Constants.SANDBOX)) {
@@ -103,6 +104,15 @@ class DataCenter {
                 return CADataCenter.DEVELOPER();
             }
             return CADataCenter.PRODUCTION();
+        }
+        else if (Constants.SA_DATACENTER.some(a => a === config)) {
+            if (config.includes(Constants.SANDBOX)) {
+                return SADataCenter.SANDBOX();
+            }
+            else if(config.includes(Constants.DEVELOPER)) {
+                return SADataCenter.DEVELOPER();
+            }
+            return SADataCenter.PRODUCTION();
         }
         return null;
     }

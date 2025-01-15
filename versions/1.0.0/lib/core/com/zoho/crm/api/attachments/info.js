@@ -7,6 +7,9 @@ class Info{
 	page;
 	count;
 	moreRecords;
+	nextPageToken;
+	pageTokenExpiry;
+	previousPageToken;
 	keyModified = new Map();
 	/**
 	 * The method to get the perPage
@@ -93,6 +96,72 @@ class Info{
 		}
 		this.moreRecords = moreRecords;
 		this.keyModified.set("more_records", 1);
+
+	}
+
+	/**
+	 * The method to get the nextPageToken
+	 * @returns {String} A String representing the nextPageToken
+	 */
+	getNextPageToken()	{
+		return this.nextPageToken;
+
+	}
+
+	/**
+	 * The method to set the value to nextPageToken
+	 * @param {String} nextPageToken A String representing the nextPageToken
+	 */
+	setNextPageToken(nextPageToken)	{
+		if((nextPageToken != null) && (!(Object.prototype.toString.call(nextPageToken) == "[object String]")))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: nextPageToken EXPECTED TYPE: String", null, null);
+		}
+		this.nextPageToken = nextPageToken;
+		this.keyModified.set("next_page_token", 1);
+
+	}
+
+	/**
+	 * The method to get the pageTokenExpiry
+	 * @returns {Date} An instance of Date
+	 */
+	getPageTokenExpiry()	{
+		return this.pageTokenExpiry;
+
+	}
+
+	/**
+	 * The method to set the value to pageTokenExpiry
+	 * @param {Date} pageTokenExpiry An instance of Date
+	 */
+	setPageTokenExpiry(pageTokenExpiry)	{
+		if((pageTokenExpiry != null) && (!(pageTokenExpiry instanceof Date)))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: pageTokenExpiry EXPECTED TYPE: Date", null, null);
+		}
+		this.pageTokenExpiry = pageTokenExpiry;
+		this.keyModified.set("page_token_expiry", 1);
+
+	}
+
+	/**
+	 * The method to get the previousPageToken
+	 * @returns {String} A String representing the previousPageToken
+	 */
+	getPreviousPageToken()	{
+		return this.previousPageToken;
+
+	}
+
+	/**
+	 * The method to set the value to previousPageToken
+	 * @param {String} previousPageToken A String representing the previousPageToken
+	 */
+	setPreviousPageToken(previousPageToken)	{
+		if((previousPageToken != null) && (!(Object.prototype.toString.call(previousPageToken) == "[object String]")))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: previousPageToken EXPECTED TYPE: String", null, null);
+		}
+		this.previousPageToken = previousPageToken;
+		this.keyModified.set("previous_page_token", 1);
 
 	}
 

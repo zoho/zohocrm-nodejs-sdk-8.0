@@ -6,7 +6,7 @@ class Layouts{
 	displayLabel;
 	name;
 	id;
-	defaultview;
+	defaultView;
 	keyModified = new Map();
 	/**
 	 * The method to get the displayLabel
@@ -75,24 +75,24 @@ class Layouts{
 	}
 
 	/**
-	 * The method to get the defaultview
+	 * The method to get the defaultView
 	 * @returns {Views} An instance of Views
 	 */
-	getDefaultview()	{
-		return this.defaultview;
+	getDefaultView()	{
+		return this.defaultView;
 
 	}
 
 	/**
-	 * The method to set the value to defaultview
-	 * @param {Views} defaultview An instance of Views
+	 * The method to set the value to defaultView
+	 * @param {Views} defaultView An instance of Views
 	 */
-	async setDefaultview(defaultview)	{
+	async setDefaultView(defaultView)	{
 		const Views = (await (import("./views.js"))).MasterModel;
-		if((defaultview != null) && (!(defaultview instanceof Views)))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: defaultview EXPECTED TYPE: Views", null, null);
+		if((defaultView != null) && (!(defaultView instanceof Views)))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: defaultView EXPECTED TYPE: Views", null, null);
 		}
-		this.defaultview = defaultview;
+		this.defaultView = defaultView;
 		this.keyModified.set("_default_view", 1);
 
 	}

@@ -3,27 +3,27 @@ import {Constants} from "../../../../../../utils/util/constants.js";
 
 class ResponseWrapper{
 
-	conversionoptions;
+	conversionOptions;
 	keyModified = new Map();
 	/**
-	 * The method to get the conversionoptions
+	 * The method to get the conversionOptions
 	 * @returns {ConversionOptions} An instance of ConversionOptions
 	 */
-	getConversionoptions()	{
-		return this.conversionoptions;
+	getConversionOptions()	{
+		return this.conversionOptions;
 
 	}
 
 	/**
-	 * The method to set the value to conversionoptions
-	 * @param {ConversionOptions} conversionoptions An instance of ConversionOptions
+	 * The method to set the value to conversionOptions
+	 * @param {ConversionOptions} conversionOptions An instance of ConversionOptions
 	 */
-	async setConversionoptions(conversionoptions)	{
+	async setConversionOptions(conversionOptions)	{
 		const ConversionOptions = (await (import("./conversion_options.js"))).MasterModel;
-		if((conversionoptions != null) && (!(conversionoptions instanceof ConversionOptions)))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: conversionoptions EXPECTED TYPE: ConversionOptions", null, null);
+		if((conversionOptions != null) && (!(conversionOptions instanceof ConversionOptions)))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: conversionOptions EXPECTED TYPE: ConversionOptions", null, null);
 		}
-		this.conversionoptions = conversionoptions;
+		this.conversionOptions = conversionOptions;
 		this.keyModified.set("__conversion_options", 1);
 
 	}

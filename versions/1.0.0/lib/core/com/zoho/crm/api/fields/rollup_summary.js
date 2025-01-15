@@ -56,7 +56,7 @@ class RollupSummary{
 
 	/**
 	 * The method to get the basedOnModule
-	 * @returns {MinifiedField} An instance of MinifiedField
+	 * @returns {MinifiedModule} An instance of MinifiedModule
 	 */
 	getBasedOnModule()	{
 		return this.basedOnModule;
@@ -65,12 +65,12 @@ class RollupSummary{
 
 	/**
 	 * The method to set the value to basedOnModule
-	 * @param {MinifiedField} basedOnModule An instance of MinifiedField
+	 * @param {MinifiedModule} basedOnModule An instance of MinifiedModule
 	 */
 	async setBasedOnModule(basedOnModule)	{
-		const MinifiedField = (await (import("./minified_field.js"))).MasterModel;
-		if((basedOnModule != null) && (!(basedOnModule instanceof MinifiedField)))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: basedOnModule EXPECTED TYPE: MinifiedField", null, null);
+		const MinifiedModule = (await (import("../modules/minified_module.js"))).MasterModel;
+		if((basedOnModule != null) && (!(basedOnModule instanceof MinifiedModule)))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: basedOnModule EXPECTED TYPE: MinifiedModule", null, null);
 		}
 		this.basedOnModule = basedOnModule;
 		this.keyModified.set("based_on_module", 1);
@@ -79,7 +79,7 @@ class RollupSummary{
 
 	/**
 	 * The method to get the relatedList
-	 * @returns {MinifiedField} An instance of MinifiedField
+	 * @returns {RelatedList} An instance of RelatedList
 	 */
 	getRelatedList()	{
 		return this.relatedList;
@@ -88,12 +88,12 @@ class RollupSummary{
 
 	/**
 	 * The method to set the value to relatedList
-	 * @param {MinifiedField} relatedList An instance of MinifiedField
+	 * @param {RelatedList} relatedList An instance of RelatedList
 	 */
 	async setRelatedList(relatedList)	{
-		const MinifiedField = (await (import("./minified_field.js"))).MasterModel;
-		if((relatedList != null) && (!(relatedList instanceof MinifiedField)))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: relatedList EXPECTED TYPE: MinifiedField", null, null);
+		const RelatedList = (await (import("../related_lists/related_list.js"))).MasterModel;
+		if((relatedList != null) && (!(relatedList instanceof RelatedList)))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: relatedList EXPECTED TYPE: RelatedList", null, null);
 		}
 		this.relatedList = relatedList;
 		this.keyModified.set("related_list", 1);

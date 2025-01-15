@@ -77,7 +77,7 @@ class Fields{
 	globalPicklist;
 	hipaaComplianceEnabled;
 	hipaaCompliance;
-	updateexistingrecords;
+	updateExistingRecords;
 	numberSeparator;
 	textarea;
 	staticField;
@@ -1671,7 +1671,7 @@ class Fields{
 
 	/**
 	 * The method to get the globalPicklist
-	 * @returns {Object} An Object representing the globalPicklist
+	 * @returns {Picklist} An instance of Picklist
 	 */
 	getGlobalPicklist()	{
 		return this.globalPicklist;
@@ -1680,9 +1680,13 @@ class Fields{
 
 	/**
 	 * The method to set the value to globalPicklist
-	 * @param {Object} globalPicklist An Object representing the globalPicklist
+	 * @param {Picklist} globalPicklist An instance of Picklist
 	 */
-	setGlobalPicklist(globalPicklist)	{
+	async setGlobalPicklist(globalPicklist)	{
+		const Picklist = (await (import("../global_picklists/picklist.js"))).MasterModel;
+		if((globalPicklist != null) && (!(globalPicklist instanceof Picklist)))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: globalPicklist EXPECTED TYPE: Picklist", null, null);
+		}
 		this.globalPicklist = globalPicklist;
 		this.keyModified.set("global_picklist", 1);
 
@@ -1734,23 +1738,23 @@ class Fields{
 	}
 
 	/**
-	 * The method to get the updateexistingrecords
-	 * @returns {Boolean} A Boolean representing the updateexistingrecords
+	 * The method to get the updateExistingRecords
+	 * @returns {Boolean} A Boolean representing the updateExistingRecords
 	 */
-	getUpdateexistingrecords()	{
-		return this.updateexistingrecords;
+	getUpdateExistingRecords()	{
+		return this.updateExistingRecords;
 
 	}
 
 	/**
-	 * The method to set the value to updateexistingrecords
-	 * @param {Boolean} updateexistingrecords A Boolean representing the updateexistingrecords
+	 * The method to set the value to updateExistingRecords
+	 * @param {Boolean} updateExistingRecords A Boolean representing the updateExistingRecords
 	 */
-	setUpdateexistingrecords(updateexistingrecords)	{
-		if((updateexistingrecords != null) && (!(Object.prototype.toString.call(updateexistingrecords) == "[object Boolean]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: updateexistingrecords EXPECTED TYPE: Boolean", null, null);
+	setUpdateExistingRecords(updateExistingRecords)	{
+		if((updateExistingRecords != null) && (!(Object.prototype.toString.call(updateExistingRecords) == "[object Boolean]")))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: updateExistingRecords EXPECTED TYPE: Boolean", null, null);
 		}
-		this.updateexistingrecords = updateexistingrecords;
+		this.updateExistingRecords = updateExistingRecords;
 		this.keyModified.set("_update_existing_records", 1);
 
 	}
