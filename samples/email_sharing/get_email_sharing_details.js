@@ -24,7 +24,7 @@ class GetEmailSharingDetails {
             let responseHandler = response.getObject();
             if (responseHandler instanceof ZOHOCRMSDK.EmailSharingDetails.ResponseWrapper) {
                 let responseWrapper = responseHandler;
-                let emailSharingDetails = responseWrapper.getEmailssharingdetails();
+                let emailSharingDetails = responseWrapper.getEmailsSharingDetails();
                 if (emailSharingDetails != null) {
                     emailSharingDetails.forEach(getEmailSharing => {
                         console.log("Email Sharing_Details: ");

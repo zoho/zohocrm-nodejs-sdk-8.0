@@ -14,12 +14,12 @@ class GetRecords {
     }
 
     static async getRecords() {
-        let queryOperations = new ZOHOCRMSDK.Query.QueryOperations();
-        let bodyWrapper = new ZOHOCRMSDK.Query.BodyWrapper();
+        let coqlOperations = new ZOHOCRMSDK.Coql.CoqlOperations();
+        let bodyWrapper = new ZOHOCRMSDK.Coql.BodyWrapper();
         let selectQuery = "select Last_Name,Created_Time from Leads where Last_Name is not null limit 200";
         bodyWrapper.setSelectQuery(selectQuery);
         //Call getRecords method that takes BodyWrapper instance as parameter
-        let response = await queryOperations.getRecords(bodyWrapper);
+        let response = await coqlOperations.getRecords(bodyWrapper);
         if (response != null) {
             console.log("Status Code: " + response.getStatusCode());
             let responseObject = response.getObject();
@@ -90,7 +90,7 @@ class GetRecords {
                         }
                     }
                 }
-                else if (responseObject instanceof ZOHOCRMSDK.Query.APIException) {
+                else if (responseObject instanceof ZOHOCRMSDK.Coql.APIException) {
                     console.log("Status: " + responseObject.getStatus().getValue());
                     console.log("Code: " + responseObject.getCode().getValue());
                     console.log("Details");
