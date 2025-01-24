@@ -22,7 +22,7 @@ class CreateEvents {
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Events.START_DATETIME, new Date(2023, 9, 9, 11, 32, 33));
         let participants = [];
         let participant1 = new ZOHOCRMSDK.Record.Participants();
-        participant1.setEmail('abc@zoho.com');
+        participant1.setEmail('abc@gmail.com');
         participant1.setType('email');
         participant1.setId(4402480254001n);
         participants.push(participant1);

@@ -21,22 +21,22 @@ class AssociateEmail {
         for (let i = 0; i < 1; i++) {
             let associateEmail = new ZOHOCRMSDK.AssociateEmail.AssociateEmail();
             let from = new ZOHOCRMSDK.AssociateEmail.From();
-            from.setEmail("abc@zoho.com");
+            from.setEmail("abc@gmail.com");
             from.setUserName("username");
             await associateEmail.setFrom(from);
             let tos = [];
             let to = new ZOHOCRMSDK.AssociateEmail.To();
-            to.setEmail("abc123@zoho.com");
+            to.setEmail("abc123@gmail.com");
             to.setUserName("username1");
             tos.push(to);
             let tos1 = [];
             let to1 = new ZOHOCRMSDK.AssociateEmail.To();
-            to1.setEmail('abc2@zoho.com');
+            to1.setEmail('abc2@gmail.com');
             to1.setUserName('username2');
             tos1.push(to1);
             let tos2 = [];
             let to2 = new ZOHOCRMSDK.AssociateEmail.To();
-            to2.setEmail('abc3@zoho.com');
+            to2.setEmail('abc3@gmail.com');
             to2.setUserName('username3');
             tos2.push(to2);
             associateEmail.setTo(tos);

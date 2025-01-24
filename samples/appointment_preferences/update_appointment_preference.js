@@ -25,7 +25,7 @@ class UpdateAppointmentPreference {
         let dealRecordConfiguration = new ZOHOCRMSDK.AppointmentPreference.DealRecordConfiguration();
         let layout = new ZOHOCRMSDK.AppointmentPreference.Layout();
         layout.setAPIName("Standard");
-        layout.setId(440248000173n);
+        layout.setId(440248173n);
         await dealRecordConfiguration.setLayout(layout);
         let mappings = [];
         let fieldMappings = new ZOHOCRMSDK.AppointmentPreference.FieldMappings();
@@ -33,7 +33,7 @@ class UpdateAppointmentPreference {
         fieldMappings.setValue("Closed Won");
         let field = new ZOHOCRMSDK.AppointmentPreference.Field();
         field.setAPIName("Stage");
-        field.setId(4402480001324032n);
+        field.setId(4402481324032n);
         await fieldMappings.setField(field);
         mappings.push(fieldMappings);
         dealRecordConfiguration.setFieldMappings(mappings);

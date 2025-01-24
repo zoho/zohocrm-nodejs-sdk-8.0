@@ -55,7 +55,7 @@ class CreateField {
         picklistfield.setLength(120);
         let picklistfieldprofiles = [];
         let profile1 = new ZOHOCRMSDK.Profiles.Profile();
-        profile1.setId(3477061000000026011n);
+        profile1.setId(3477061026011n);
         profile1.setPermissionType("read_write");
         picklistfieldprofiles.push(profile1);
 

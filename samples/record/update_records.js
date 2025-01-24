@@ -58,7 +58,7 @@ class UpdateRecords {
 
         let recordOwner = new ZOHOCRMSDK.Users.Users();
 
-        recordOwner.setEmail("abc@zoho.com");
+        recordOwner.setEmail("abc@gmail.com");
 
         record1.addKeyValue("Owner", recordOwner);
 

@@ -21,7 +21,7 @@ class UpdateVendors {
         record1.setId(323231232n);
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Vendors.VENDOR_NAME, 'new vendor name');
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Vendors.PHONE, '123321');
-        await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Vendors.EMAIL, 'abc@zoho.com');
+        await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Vendors.EMAIL, 'abc@gmail.com');
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Vendors.WEBSITE, null);
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Vendors.GL_ACCOUNT, new ZOHOCRMSDK.Choice('Sales-Software'));
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Vendors.CATEGORY, '');

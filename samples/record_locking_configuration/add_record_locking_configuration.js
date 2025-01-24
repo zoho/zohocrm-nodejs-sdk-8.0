@@ -24,7 +24,7 @@ class AddRecordLockingConfiguration {
 		let excludedFields = [];
 		let excludedField = new ZOHOCRMSDK.Fields.MinifiedField();
 		excludedField.setAPIName("Annual_Revenue");
-		excludedField.setId(5843104000000002617n);
+		excludedField.setId(584310402617n);
 		excludedFields.push(excludedField);
 		recordLock.setExcludedFields(excludedFields);
 
@@ -39,9 +39,9 @@ class AddRecordLockingConfiguration {
 
 		let field1 = new ZOHOCRMSDK.RecordLockingConfiguration.Field();
 		field1.setAPIName("Email");
-		field1.setId(5843104000000002599n);
+		field1.setId(5843104002599n);
 		await criteria.setField(field1);
-		criteria.setValue("test@zoho.com");
+		criteria.setValue("test@gmail.com");
 		await lockingRule.setCriteria(criteria);
 
 		lockingRules.push(lockingRule);
@@ -59,14 +59,14 @@ class AddRecordLockingConfiguration {
 		let restrictedCustomButtons = [];
 		let restrictedCustomButton = new ZOHOCRMSDK.RecordLockingConfiguration.RestrictedCustomButton();
 		restrictedCustomButton.setName("Send Doc");
-		restrictedCustomButton.setId(5843104000000485570n);
+		restrictedCustomButton.setId(584310400485570n);
 		restrictedCustomButtons.push(restrictedCustomButton);
 		recordLock.setRestrictedCustomButtons(restrictedCustomButtons);
 
 		let lockExcludedProfiles = [];
 		let lockExcludedProfile = new ZOHOCRMSDK.RecordLockingConfiguration.LockExcludedProfile();
 		lockExcludedProfile.setName("Administrator");
-		lockExcludedProfile.setId(5843104000000026011n);
+		lockExcludedProfile.setId(58431040026011n);
 		lockExcludedProfiles.push(lockExcludedProfile);
 		recordLock.setLockExcludedProfiles(lockExcludedProfiles);
 

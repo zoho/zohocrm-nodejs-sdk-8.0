@@ -40,7 +40,7 @@ class UpdateFields {
 		field.setExternal(external);
 		let profiles = [];
 		let profile = new ZOHOCRMSDK.Fields.Profile();
-		profile.setId(3477061000000026014n);
+		profile.setId(34770610026014n);
 		profile.setPermissionType("read_write");
 		profiles.push(profile);
 		field.setProfiles(profiles);

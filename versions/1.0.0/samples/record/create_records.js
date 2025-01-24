@@ -37,7 +37,7 @@ class CreateRecords {
 
         await record.addFieldValue(ZOHOCRMSDK.Record.Field.Contacts.LAST_NAME, "NOde js SDK");
         await record.addFieldValue(ZOHOCRMSDK.Record.Field.Contacts.FIRST_NAME, "Node");
-        await record.addFieldValue(ZOHOCRMSDK.Record.Field.Contacts.EMAIL, "abc@zoho.com");
+        await record.addFieldValue(ZOHOCRMSDK.Record.Field.Contacts.EMAIL, "abc@gmail.com");
         await record.addFieldValue(ZOHOCRMSDK.Record.Field.Contacts.MOBILE, "1234221");
         record.addKeyValue("myfield", "myvalue");
         /*
@@ -65,7 +65,7 @@ class CreateRecords {
         fileDetails.push(fileDetail);
         record.addKeyValue("File_Upload", fileDetails);
         let recordOwner = new ZOHOCRMSDK.Users.Users();
-        recordOwner.setEmail("abc@zoho.com");
+        recordOwner.setEmail("abc@gmail.com");
         record.addKeyValue("Owner", recordOwner);
         //Used when GDPR is enabled
         let dataConsent = new ZOHOCRMSDK.Record.Consent();
@@ -141,7 +141,7 @@ class CreateRecords {
         await record.addFieldValue(ZOHOCRMSDK.Record.Field.Events.START_DATETIME, startDateTime);
         let participantsArray = [];
         let participant = new ZOHOCRMSDK.Record.Participants();
-        participant.setParticipant("test@zoho.com");
+        participant.setParticipant("test@gmail.com");
         participant.setType("email");
         participantsArray.push(participant);
         participant = new ZOHOCRMSDK.Record.Participants();
@@ -174,7 +174,7 @@ class CreateRecords {
         pricingDetail.addKeyValue("discount", 3.0);
         pricingDetailsArray.push(pricingDetail);
         await record.addFieldValue(ZOHOCRMSDK.Record.Field.Price_Books.PRICING_DETAILS, pricingDetailsArray);
-        record.addKeyValue("Email", "abc@zoho.com");
+        record.addKeyValue("Email", "abc@gmail.com");
         await record.addFieldValue(ZOHOCRMSDK.Record.Field.Price_Books.DESCRIPTION, "TEST");
         await record.addFieldValue(ZOHOCRMSDK.Record.Field.Price_Books.PRICE_BOOK_NAME, "book_name");
         await record.addFieldValue(ZOHOCRMSDK.Record.Field.Price_Books.PRICING_MODEL, new Choice("Flat"));

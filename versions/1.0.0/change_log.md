@@ -32,6 +32,9 @@
 
 9. [EmailSharingDetails](#emailSharingDetails)
    - [Get EmailSharingDetails](#get-emailsharingdetails)
+
+10. [Profile](#profile)
+   - [Get Profiles](#get-profiles) 
    
 ## Attachments
 
@@ -89,7 +92,7 @@
 
 ### Get Fields
 
-- Changes Note : New Fields introduced in MultiSelectLookup and some fields are removed.
+- Changes Note : New fields[linkingDetails, connectedDetails, relatedList] introduced in MultiSelectLookup and fields[displayLabel, linkingModule, connectedModule, lookupApiname, apiName, connectedfieldApiname, connectedlookupApiname, id] are removed.
 
 - NODEJS SDK 7.0-v3.0.0
 
@@ -220,7 +223,7 @@
   
 ### Update Field
 
-- Changes Note : Sample Input for picklist and rollup summary fields.
+- Changes Note : Sample Input for picklist and rollup summary fields where basedOnModule field type changed from MinifiedField to MinifiedModule and relatedList field type changed from MinifiedField to RelatedList.
 
 - NODEJS SDK 7.0-v3.0.0
 
@@ -689,12 +692,12 @@
     let ziaOrgEnrichmentOperations = new ZOHOCRMSDK.ZiaOrgEnrichment.ZiaOrgEnrichmentOperations();
     let response = await ziaOrgEnrichmentOperations.getZiaOrgEnrichment(ziaOrgEnrichmentId);
     let responseObject = response.getObject();
-			if (responseObject != null) {
-				if (responseObject instanceof ZOHOCRMSDK.ZiaOrgEnrichment.ResponseWrapper)
-				{
-					let ziaorgenrichment = responseObject.getZiaorgenrichment();
-                }
-            }
+    if (responseObject != null) {
+        if (responseObject instanceof ZOHOCRMSDK.ZiaOrgEnrichment.ResponseWrapper)
+        {
+            let ziaorgenrichment = responseObject.getZiaorgenrichment();
+        }
+    }
     ```
 - NODEJS SDK 8.0-v1.0.0
     
@@ -702,12 +705,12 @@
     let ziaOrgEnrichmentOperations = new ZOHOCRMSDK.ZiaOrgEnrichment.ZiaOrgEnrichmentOperations();
     let response = await ziaOrgEnrichmentOperations.getZiaOrgEnrichment(ziaOrgEnrichmentId);
     let responseObject = response.getObject();
-			if (responseObject != null) {
-				if (responseObject instanceof ZOHOCRMSDK.ZiaOrgEnrichment.ResponseWrapper)
-				{
-					let ziaorgenrichment = responseObject.getZiaOrgEnrichment();
-                }
-            }
+    if (responseObject != null) {
+        if (responseObject instanceof ZOHOCRMSDK.ZiaOrgEnrichment.ResponseWrapper)
+        {
+            let ziaorgenrichment = responseObject.getZiaOrgEnrichment();
+        }
+    }
     ```
   
 ### Get ZiaOrgEnrichments
@@ -750,18 +753,18 @@
   	let ziaPeopleEnrichmentOperations = new ZOHOCRMSDK.ZiaPeopleEnrichment.ZiaPeopleEnrichmentOperations();
     let request = new ZOHOCRMSDK.ZiaPeopleEnrichment.BodyWrapper();
     request.setZiapeopleenrichment(ziapeopleenrichment);
-		let paramInstance = new ZOHOCRMSDK.ParameterMap();
-		await paramInstance.add(ZOHOCRMSDK.ZiaPeopleEnrichment.CreateZiaPeopleEnrichmentParam.MODULE, "TestSDK12");
-		let response = await ziaPeopleEnrichmentOperations.createZiaPeopleEnrichment(request, paramInstance);
-		if (response != null) {
-			console.log("Status Code: " + response.getStatusCode());
-			let responseObject = response.getObject();
-			if (responseObject != null) {
-				if (responseObject instanceof ZOHOCRMSDK.ZiaPeopleEnrichment.ActionWrapper) {
-					let actionResponses = responseObject.getZiapeopleenrichment();
-                }
+    let paramInstance = new ZOHOCRMSDK.ParameterMap();
+    await paramInstance.add(ZOHOCRMSDK.ZiaPeopleEnrichment.CreateZiaPeopleEnrichmentParam.MODULE, "TestSDK12");
+    let response = await ziaPeopleEnrichmentOperations.createZiaPeopleEnrichment(request, paramInstance);
+    if (response != null) {
+        console.log("Status Code: " + response.getStatusCode());
+        let responseObject = response.getObject();
+        if (responseObject != null) {
+            if (responseObject instanceof ZOHOCRMSDK.ZiaPeopleEnrichment.ActionWrapper) {
+                let actionResponses = responseObject.getZiapeopleenrichment();
             }
-        } 
+        }
+    } 
     ```
 
 - NODEJS SDK 8.0-v1.0.0
@@ -769,18 +772,18 @@
   	let ziaPeopleEnrichmentOperations = new ZOHOCRMSDK.ZiaPeopleEnrichment.ZiaPeopleEnrichmentOperations();
     let request = new ZOHOCRMSDK.ZiaPeopleEnrichment.BodyWrapper();
     request.setZiaPeopleEnrichment(ziapeopleenrichment);
-		let paramInstance = new ZOHOCRMSDK.ParameterMap();
-		await paramInstance.add(ZOHOCRMSDK.ZiaPeopleEnrichment.CreateZiaPeopleEnrichmentParam.MODULE, "TestSDK12");
-		let response = await ziaPeopleEnrichmentOperations.createZiaPeopleEnrichment(request, paramInstance);
-		if (response != null) {
-			console.log("Status Code: " + response.getStatusCode());
-			let responseObject = response.getObject();
-			if (responseObject != null) {
-				if (responseObject instanceof ZOHOCRMSDK.ZiaPeopleEnrichment.ActionWrapper) {
-					let actionResponses = responseObject.getZiaPeopleEnrichment();
-                }
+    let paramInstance = new ZOHOCRMSDK.ParameterMap();
+    await paramInstance.add(ZOHOCRMSDK.ZiaPeopleEnrichment.CreateZiaPeopleEnrichmentParam.MODULE, "TestSDK12");
+    let response = await ziaPeopleEnrichmentOperations.createZiaPeopleEnrichment(request, paramInstance);
+    if (response != null) {
+        console.log("Status Code: " + response.getStatusCode());
+        let responseObject = response.getObject();
+        if (responseObject != null) {
+            if (responseObject instanceof ZOHOCRMSDK.ZiaPeopleEnrichment.ActionWrapper) {
+                let actionResponses = responseObject.getZiaPeopleEnrichment();
             }
-        } 
+        }
+    } 
     ```
   
 ### Get ZiaPeopleEnrichment
@@ -792,11 +795,11 @@
     let ziaPeopleEnrichmentOperations = new ZOHOCRMSDK.ZiaPeopleEnrichment.ZiaPeopleEnrichmentOperations();
     let response = await ziaPeopleEnrichmentOperations.getZiaPeopleEnrichment(ziaPeopleEnrichmentId);
     let responseObject = response.getObject();
-        if (responseObject != null) {
-            if (responseObject instanceof ZOHOCRMSDK.ZiaPeopleEnrichment.ResponseWrapper) {
-                let ziapeopleenrichment = responseObject.getZiapeopleenrichment();
-            }
+    if (responseObject != null) {
+        if (responseObject instanceof ZOHOCRMSDK.ZiaPeopleEnrichment.ResponseWrapper) {
+            let ziapeopleenrichment = responseObject.getZiapeopleenrichment();
         }
+    }
     ```
 
 - NODEJS SDK 8.0-v1.0.0
@@ -804,11 +807,11 @@
     let ziaPeopleEnrichmentOperations = new ZOHOCRMSDK.ZiaPeopleEnrichment.ZiaPeopleEnrichmentOperations();
     let response = await ziaPeopleEnrichmentOperations.getZiaPeopleEnrichment(ziaPeopleEnrichmentId);
     let responseObject = response.getObject();
-        if (responseObject != null) {
-            if (responseObject instanceof ZOHOCRMSDK.ZiaPeopleEnrichment.ResponseWrapper) {
-                let ziapeopleenrichment = responseObject.getZiaPeopleEnrichment();
-            }
+    if (responseObject != null) {
+        if (responseObject instanceof ZOHOCRMSDK.ZiaPeopleEnrichment.ResponseWrapper) {
+            let ziapeopleenrichment = responseObject.getZiaPeopleEnrichment();
         }
+    }
     ```
 
 ### Get ZiaPeopleEnrichments
@@ -821,11 +824,11 @@
     let paramInstance = new ZOHOCRMSDK.ParameterMap();
     let response = await ziaPeopleEnrichmentOperations.getZiaPeopleEnrichments(paramInstance);
     let responseObject = response.getObject();
-        if (responseObject != null) {
-            if (responseObject instanceof ZOHOCRMSDK.ZiaPeopleEnrichment.ResponseWrapper) {
-                let ziapeopleenrichment = responseObject.getZiapeopleenrichment();
-            }
+    if (responseObject != null) {
+        if (responseObject instanceof ZOHOCRMSDK.ZiaPeopleEnrichment.ResponseWrapper) {
+            let ziapeopleenrichment = responseObject.getZiapeopleenrichment();
         }
+    }
     ```
 
 - NODEJS SDK 8.0-v1.0.0
@@ -834,11 +837,11 @@
     let paramInstance = new ZOHOCRMSDK.ParameterMap();
     let response = await ziaPeopleEnrichmentOperations.getZiaPeopleEnrichments(paramInstance);
     let responseObject = response.getObject();
-        if (responseObject != null) {
-            if (responseObject instanceof ZOHOCRMSDK.ZiaPeopleEnrichment.ResponseWrapper) {
-                let ziapeopleenrichment = responseObject.getZiaPeopleEnrichment();
-            }
+    if (responseObject != null) {
+        if (responseObject instanceof ZOHOCRMSDK.ZiaPeopleEnrichment.ResponseWrapper) {
+            let ziapeopleenrichment = responseObject.getZiaPeopleEnrichment();
         }
+    }
     ```
   
 ## FromAddresses
@@ -895,3 +898,38 @@
     }
     ```
   
+## Profile
+
+### Get Profiles
+
+- Changes Note : Updated getDefaultview method name to getDefaultView
+
+- NODEJS SDK 7.0-v3.0.0
+
+    ```js
+    let responseHandler = response.getObject();
+    if (responseHandler instanceof ZOHOCRMSDK.Profile.ResponseWrapper)
+    {
+        let responseWrapper = responseHandler;
+        let profiles = responseWrapper.getProfiles();
+        for (const profile of profiles)
+        {
+            let defaultView = profile.getDefaultview();
+        }
+    }
+    ```
+
+- NODEJS SDK 8.0-v1.0.0
+
+    ```js
+    let responseHandler = response.getObject();
+    if (responseHandler instanceof ZOHOCRMSDK.Profile.ResponseWrapper)
+    {
+        let responseWrapper = responseHandler;
+        let profiles = responseWrapper.getProfiles();
+        for (const profile of profiles)
+        {
+            let defaultView = profile.getDefaultView();
+        }
+    }
+    ```

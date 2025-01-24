@@ -21,7 +21,7 @@ class CreateZiaOrgEnrichment {
 		let ziaorgenrichment1 = new ZOHOCRMSDK.ZiaOrgEnrichment.ZiaOrgEnrichment();
 		let enrichBasedOn = new ZOHOCRMSDK.ZiaOrgEnrichment.EnrichBasedOn();
 		enrichBasedOn.setName("zoho");
-		enrichBasedOn.setEmail("sales@zoho.com");
+		enrichBasedOn.setEmail("sales@gmail.com");
 		enrichBasedOn.setWebsite("www.zoho.com");
 		await ziaorgenrichment1.setEnrichBasedOn(enrichBasedOn);
 		ziaorgenrichment.push(ziaorgenrichment1);

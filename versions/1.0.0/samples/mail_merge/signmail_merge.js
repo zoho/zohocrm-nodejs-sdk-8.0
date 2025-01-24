@@ -28,7 +28,7 @@ class SignmailMerge {
 		let signer = new ZOHOCRMSDK.MailMerge.Signers();
 		signer.setActionType(new ZOHOCRMSDK.Choice("sign"));
 		let recipent = new ZOHOCRMSDK.MailMerge.Address();
-		recipent.setValue("abc@zoho.com");
+		recipent.setValue("abc@gmail.com");
 		await signer.setRecipient(recipent);
 		signers.push(signer);
 		mailmerge.setSigners(signers);

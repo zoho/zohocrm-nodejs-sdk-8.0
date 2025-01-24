@@ -103,6 +103,6 @@ class GetAllContactRolesofDeal {
         }
     }
 }
-let dealId = 3477061000022418049n;
+let dealId = 347706122418049n;
 await GetAllContactRolesofDeal.initialize();
 await GetAllContactRolesofDeal.getAllContactRolesofDeal(dealId);

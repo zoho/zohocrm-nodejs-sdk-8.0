@@ -53,7 +53,7 @@ class UpdateRecordUsingExternalId {
         fileDetails.push(fileDetail);
         // record.addKeyValue("File_Upload", fileDetails);
         let recordOwner = new ZOHOCRMSDK.Users.Users();
-        recordOwner.setEmail("abc@zoho.com");
+        recordOwner.setEmail("abc@gmail.com");
         record.addKeyValue("Owner", recordOwner);
         //Used when GDPR is enabled
         let dataConsent = new ZOHOCRMSDK.Record.Consent();

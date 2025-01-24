@@ -24,9 +24,9 @@ class CreateLeads {
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Leads.LAST_NAME, "LastName");
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Leads.FIRST_NAME, "First_Name");
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Leads.ANNUAL_REVENUE, 100.1);
-        await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Leads.EMAIL, "abc@zoho.com");
+        await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Leads.EMAIL, "abc@gmail.com");
         record1.addKeyValue("Designation", "Title_Name");
-        await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Leads.SECONDARY_EMAIL, "abc1@zoho.com");
+        await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Leads.SECONDARY_EMAIL, "abc1@gmail.com");
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Leads.PHONE, "3003003330");
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Leads.FAX, "fax");
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Leads.MOBILE, "10101010");

@@ -67,5 +67,5 @@ class GetRecyclebinRecord {
 }
 
 await GetRecyclebinRecord.initialize();
-let id = 3477061000024115001n;
+let id = 3477061024115001n;
 await GetRecyclebinRecord.getRecyclebinRecord(id);

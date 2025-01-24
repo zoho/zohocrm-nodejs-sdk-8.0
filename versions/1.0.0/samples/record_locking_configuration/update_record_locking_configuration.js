@@ -24,21 +24,21 @@ class UpdateRecordLockingConfiguration {
 		let lockingRules = [];
 
 		let lockingRule = new ZOHOCRMSDK.RecordLockingConfiguration.LockingRules();
-		lockingRule.setId(5843104000000766010n);
+		lockingRule.setId(5843104000766010n);
 		lockingRule.setDelete(true);
 		lockingRules.push(lockingRule);
 
 		lockingRule = new ZOHOCRMSDK.RecordLockingConfiguration.LockingRules();
 		lockingRule.setName("email rule 34");
-		lockingRule.setId(5843104000000766034n);
+		lockingRule.setId(5843104000766034n);
 		lockingRule.setLockExistingRecords(false);
 		let criteria = new ZOHOCRMSDK.RecordLockingConfiguration.Criteria();
 		criteria.setComparator("equal");
 		let field1 = new ZOHOCRMSDK.RecordLockingConfiguration.Field();
 		field1.setAPIName("Email");
-		field1.setId(5843104000000002599n);
+		field1.setId(5843104002599n);
 		await criteria.setField(field1);
-		criteria.setValue("test@zoho.com");
+		criteria.setValue("test@gmail.com");
 		await lockingRule.setCriteria(criteria);
 		lockingRules.push(lockingRule);
 
@@ -49,9 +49,9 @@ class UpdateRecordLockingConfiguration {
 		criteria1.setComparator("equal");
 		let field12 = new ZOHOCRMSDK.RecordLockingConfiguration.Field();
 		field12.setAPIName("Email");
-		field12.setId(5843104000000002599n);
+		field12.setId(5843104002599n);
 		await criteria1.setField(field12);
-		criteria1.setValue("test5@zoho.com");
+		criteria1.setValue("test5@gmail.com");
 		await lockingRule.setCriteria(criteria1);
 		lockingRules.push(lockingRule);
 
@@ -67,14 +67,14 @@ class UpdateRecordLockingConfiguration {
 		let restrictedCustomButtons = [];
 		let restrictedCustomButton = new ZOHOCRMSDK.RecordLockingConfiguration.RestrictedCustomButton();
 		restrictedCustomButton.setName("Send with Zoho Sign");
-		restrictedCustomButton.setId(5843104000000485570n);
+		restrictedCustomButton.setId(5843104000485570n);
 		restrictedCustomButtons.push(restrictedCustomButton);
 		recordLock.setRestrictedCustomButtons(restrictedCustomButtons);
 
 		let lockExcludedProfiles = [];
 		let lockExcludedProfile = new ZOHOCRMSDK.RecordLockingConfiguration.LockExcludedProfile();
 		lockExcludedProfile.setName("Administrator");
-		lockExcludedProfile.setId(5843104000000026011n);
+		lockExcludedProfile.setId(5843104000026011n);
 		lockExcludedProfiles.push(lockExcludedProfile);
 		recordLock.setLockExcludedProfiles(lockExcludedProfiles);
 

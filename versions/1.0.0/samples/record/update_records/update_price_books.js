@@ -34,7 +34,7 @@ class UpdatePriceBooks {
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Price_Books.DESCRIPTION, 'description');
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Price_Books.PRICE_BOOK_NAME, 'bookName');
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Price_Books.PRICING_MODEL, new ZOHOCRMSDK.Choice('Flat'));
-        record1.addKeyValue('Email', 'abc@zoho.com');
+        record1.addKeyValue('Email', 'abc@gmail.com');
         //used when GDPR is enabled
         let dataConsent = new ZOHOCRMSDK.Record.Consent();
         dataConsent.setConsentRemarks("Approved.");
