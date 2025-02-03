@@ -7,6 +7,7 @@ class MinifiedModule{
 	id;
 	moduleName;
 	module;
+	crypt;
 	keyModified = new Map();
 	/**
 	 * The method to get the apiName
@@ -93,6 +94,28 @@ class MinifiedModule{
 		}
 		this.module = module;
 		this.keyModified.set("module", 1);
+
+	}
+
+	/**
+	 * The method to get the crypt
+	 * @returns {Boolean} A Boolean representing the crypt
+	 */
+	getCrypt()	{
+		return this.crypt;
+
+	}
+
+	/**
+	 * The method to set the value to crypt
+	 * @param {Boolean} crypt A Boolean representing the crypt
+	 */
+	setCrypt(crypt)	{
+		if((crypt != null) && (!(Object.prototype.toString.call(crypt) == "[object Boolean]")))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: crypt EXPECTED TYPE: Boolean", null, null);
+		}
+		this.crypt = crypt;
+		this.keyModified.set("crypt", 1);
 
 	}
 
