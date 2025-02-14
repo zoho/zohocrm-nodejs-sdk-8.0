@@ -31,10 +31,11 @@ License
 
     - NodeJS SDK improved to support the following new APIs
 
-      - [Share Emails API]()
-      - [Calls Preference API]()
-      - [Data Sharing Settings API]()
-      - [Fetch Full Data API]()
+      - [Get Related Records Count of a Record]()
+      - [Calls Preference]()
+      - [Record-Level Sharing of Emails]()
+      - [Data Sharing Rules API]()
+      - [Get Rich Text Fields API]()
 
      
 
