@@ -21,7 +21,7 @@ class SearchRecords {
         let recordOperations = new ZOHOCRMSDK.Record.RecordOperations(moduleAPIName);
         let paramInstance = new ZOHOCRMSDK.ParameterMap();
         /* Possible parameters for Search Records operation */
-        await paramInstance.add(ZOHOCRMSDK.Record.SearchRecordsParam.EMAIL, "user@gmail.com");
+        await paramInstance.add(ZOHOCRMSDK.Record.SearchRecordsParam.EMAIL, "user@zoho.com");
         await paramInstance.add(ZOHOCRMSDK.Record.SearchRecordsParam.PHONE, "234567890");
         await paramInstance.add(ZOHOCRMSDK.Record.SearchRecordsParam.WORD, "First Name Last Name");
         await paramInstance.add(ZOHOCRMSDK.Record.SearchRecordsParam.CONVERTED, "both");

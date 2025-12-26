@@ -33,7 +33,7 @@ class CreateCases {
         let accountName = new ZOHOCRMSDK.Record.Record();
         accountName.setId(4330242352342342n);
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Cases.ACCOUNT_NAME, accountName);
-        await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Cases.EMAIL, "abc@gmail.com");
+        await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Cases.EMAIL, "abc@zoho.com");
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Cases.PRIORITY, new ZOHOCRMSDK.Choice("Low"));
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Cases.CASE_REASON, new ZOHOCRMSDK.Choice("New problem"));
         let dealName = new ZOHOCRMSDK.Record.Record();
