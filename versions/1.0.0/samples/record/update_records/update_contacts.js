@@ -21,7 +21,7 @@ class UpdateContacts {
         record1.setId(3443312423432n);
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Contacts.LAST_NAME, 'lastname');
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Contacts.FIRST_NAME, 'firstname');
-        await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Contacts.EMAIL, 'abc@gmail.com');
+        await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Contacts.EMAIL, 'abc@zoho.com');
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Contacts.TITLE, 'title');
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Contacts.PHONE, '1001001');
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Contacts.DEPARTMENT, 'Department name');
@@ -34,7 +34,7 @@ class UpdateContacts {
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Contacts.ASST_PHONE, '');
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Contacts.EMAIL_OPT_OUT, true);
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Contacts.SKYPE_ID, 'sky_123');
-        await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Contacts.SECONDARY_EMAIL, 'abc1@gmail.com');
+        await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Contacts.SECONDARY_EMAIL, 'abc1@zoho.com');
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Contacts.TWITTER, 'twitter_55');
         let accountName = new ZOHOCRMSDK.Record.Record();
         accountName.setId(440248390054n);

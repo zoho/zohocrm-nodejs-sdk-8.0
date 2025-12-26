@@ -20,7 +20,7 @@ class CreateAccounts {
         let record1 = new ZOHOCRMSDK.Record.Record();
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Accounts.ACCOUNT_NAME, 'New Account');
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Accounts.PHONE, '12121212');
-        record1.addKeyValue("Email", 'abc@gmail.com');
+        record1.addKeyValue("Email", 'abc@zoho.com');
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Accounts.FAX, 'Fax');
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Accounts.ACCOUNT_SITE, 'www.domain.com');
         await record1.addFieldValue(ZOHOCRMSDK.Record.Field.Accounts.WEBSITE, 'website.com');

@@ -41,7 +41,7 @@ class AddRecordLockingConfiguration {
 		field1.setAPIName("Email");
 		field1.setId(5843104002599n);
 		await criteria.setField(field1);
-		criteria.setValue("test@gmail.com");
+		criteria.setValue("test@zoho.com");
 		await lockingRule.setCriteria(criteria);
 
 		lockingRules.push(lockingRule);

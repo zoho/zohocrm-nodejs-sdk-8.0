@@ -54,7 +54,7 @@ class UpdateRecord {
         fileDetails.push(fileDetail);
         record.addKeyValue("File_Upload", fileDetails);
         let recordOwner = new ZOHOCRMSDK.Users.User();
-        recordOwner.setEmail("abc@gmail.com");
+        recordOwner.setEmail("abc@zoho.com");
         record.addKeyValue("Owner", recordOwner);
         //Used when GDPR is enabled
         let dataConsent = new ZOHOCRMSDK.Record.Consent();

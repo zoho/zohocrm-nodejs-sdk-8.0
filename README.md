@@ -25,6 +25,37 @@ License
 
 ## Latest Version
 
+- [3.0.0](/versions/3.0.0/README.md)
+  - Updated dependencies to their latest versions.
+  - Fixed minor bugs and improved performance.
+  - Improved error handling and logging mechanisms.
+  - Handled SDK utils and API connectors.
+  - Improved DB store query handling.
+  - Fixed an issue with the Blueprint update API response.
+  - Blueprint Field class `validationRule` field datatype changed (String to Object).
+  - BulkWrite `BodyWrapper` class `fileType` field datatype changed (Choice to String).
+  - BulkWrite `JobDetail` class `fileType` field datatype changed (Choice to String).
+  - BulkRead `Query` class `fileType` field datatype changed (Choice to String).
+  - Modules `GetModulesParam` class `STATUS` field datatype changed (Choice to String).
+  - Added new `trigger` field in Notes `BodyWrapper` class.
+  - Notifications class `deleteEvents` field datatype changed (Choice to String).
+  - Modules `DeleteNotificationParam` class `CHANNEL_IDS` field datatype changed (Long to String).
+  - Profiles and `MinifiedProfile` class `delete` field datatype changed (Boolean to `Delete` class).
+  - Added new `applyFeatureExecution`, `applyValidationRule`, `applyFunctionValidationRule`, and `skipFeatureExecution` fields in Record `BodyWrapper` class.
+  - Tags class `colorCode` field datatype changed (Choice to String).
+  - Users `CountWrapper` class `count` field datatype changed (Long to Integer).
+  - Users `GetUsersParam` class `TYPE` field datatype changed (Choice to String).
+  - Webforms `Abtesting` class `id` field datatype changed (Long to String).
+  - Webforms `AcknowledgeVisitor` class `templateId` field datatype changed (Long to String).
+  - Webforms `AssignmentRule` class `id` field datatype changed (Long to String).
+  - Webforms `Layout` class `id` field datatype changed (Long to String).
+  - Webforms `Module` class `id` field datatype changed (Long to String).
+  - Webforms `Owner` class `id` field datatype changed (Long to String).
+  - Webforms `Tags` class `id` field datatype changed (Long to String).
+  - Webforms `Users` class `id` field datatype changed (Long to String).
+  - Webforms `Users` `acknowledgeVisitor` field datatype changed (AcknowledgeVisitors to AcknowledgeVisitor).
+  - Removed `updateWebForms` method from the `WebformsOperations` class.
+
 - [2.0.0](/versions/2.0.0/README.md)
 
     - New fields have been added to the History Tracking Fields API. 
@@ -51,7 +82,7 @@ For older versions, please [refer](https://github.com/zoho/zohocrm-nodejs-sdk-8.
 ## Including the SDK in your project
 You can include the SDK to your project using:
 
-For including the latest [version](https://github.com/zoho/zohocrm-nodejs-sdk-8.0/releases/tag/2.0.0) using npm
+For including the latest [version](https://github.com/zoho/zohocrm-nodejs-sdk-8.0/releases/tag/3.0.0) using npm
 
   - Install **Node** from [nodejs.org](https://nodejs.org/en/download/) (if not installed).
 
@@ -109,4 +140,4 @@ For example, if you generate the tokens for your Sandbox environment in the CN d
 > - For **Mass Convert API**, you will need to provide the **ZohoCRM.settings.fields.ALL** scope along with the **ZohoCRM.mass_convert.leads.CREATE** and **ZohoCRM.mass_convert.leads.READ** scope while generating the OAuthtoken. Otherwise, the system returns the **OAUTH-SCOPE-MISMATCH** error.
 
 ---
-For more details, kindly refer [here](/versions/2.0.0/README.md).
+For more details, kindly refer [here](/versions/3.0.0/README.md).

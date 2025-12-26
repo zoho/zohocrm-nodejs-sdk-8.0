@@ -24,7 +24,7 @@ class CreateUser {
         // user.setCountryLocale("en_US");
         user.setFirstName("Test");
         user.setLastName("User");
-        user.setEmail("abc@gmail.com");
+        user.setEmail("abc@zoho.com");
         let profile = new ZOHOCRMSDK.Users.Profile();
         profile.setId(66539000403495n);
         await user.setProfile(profile);
