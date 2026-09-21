@@ -53,10 +53,10 @@ class CreateBulkWriteJob {
         fieldMapping.setAPIName("Phone");
         fieldMapping.setIndex(3);
         fieldMappings.push(fieldMapping);
-        let defaultValue = new Map();
+        let defaultValue = new ZOHOCRMSDK.BulkWrite.DefaultValue();
         fieldMapping = new ZOHOCRMSDK.BulkWrite.FieldMapping();
         fieldMapping.setAPIName("Website");
-        defaultValue.set("value", "https://www.zohoapis.com");
+        defaultValue.setValue("https://www.zohoapis.com");
         await fieldMapping.setDefaultValue(defaultValue);
         fieldMappings.push(fieldMapping);
         resource.setFieldMappings(fieldMappings);
