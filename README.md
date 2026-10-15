@@ -25,6 +25,9 @@ License
 
 ## Latest Version
 
+- [5.0.0](/versions/5.0.0/README.md)
+  - Enhanced DBStore SQL query construction by parameterizing dynamic values in saveToken() and setTokenInfo() to prevent unintended modifications to multiple users' token mappings.
+
 - [4.0.0](/versions/4.0.0/README.md)
   - Fixed an issue in the `Initializer` class where the encoded key was computed against the previously active initializer instead of the new one, causing incorrect user configuration switching.
   - BulkWrite `FieldMapping` class `defaultValue` field datatype changed (Map to `DefaultValue` class).
@@ -77,16 +80,13 @@ License
       - [Data Sharing Rules API](https://www.zoho.com/crm/developer/docs/api/v8/data-sharing-rules.html)
       - [Get Rich Text Fields API](https://www.zoho.com/crm/developer/docs/api/v8/get-rich-text-fields.html)
 
-     
-
-
 For older versions, please [refer](https://github.com/zoho/zohocrm-nodejs-sdk-8.0/releases).
 
 
 ## Including the SDK in your project
 You can include the SDK to your project using:
 
-For including the latest [version](https://github.com/zoho/zohocrm-nodejs-sdk-8.0/releases/tag/4.0.0) using npm
+For including the latest [version](https://github.com/zoho/zohocrm-nodejs-sdk-8.0/releases/tag/5.0.0) using npm
 
   - Install **Node** from [nodejs.org](https://nodejs.org/en/download/) (if not installed).
 
@@ -144,4 +144,4 @@ For example, if you generate the tokens for your Sandbox environment in the CN d
 > - For **Mass Convert API**, you will need to provide the **ZohoCRM.settings.fields.ALL** scope along with the **ZohoCRM.mass_convert.leads.CREATE** and **ZohoCRM.mass_convert.leads.READ** scope while generating the OAuthtoken. Otherwise, the system returns the **OAUTH-SCOPE-MISMATCH** error.
 
 ---
-For more details, kindly refer [here](/versions/4.0.0/README.md).
+For more details, kindly refer [here](/versions/5.0.0/README.md).
