@@ -1,6 +1,6 @@
 {
   "name": "@zohocrm/nodejs-sdk-8.0",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Node JS SDK for Zoho CRM",
   "main": "lib/index.js",
   "type": "module",
@@ -21,7 +21,7 @@
   "author": "Zoho CRM API Team (support@zohocrm.com)",
   "license": "Apache-2.0",
   "dependencies": {
-    "form-data": "3.0.4",
+    "form-data": "3.0.5",
     "got": "11.8.6",
     "moment-timezone": "0.5.43",
     "mysql": "2.18.1",
