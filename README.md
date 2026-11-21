@@ -25,6 +25,9 @@ License
 
 ## Latest Version
 
+- [6.0.0](/versions/6.0.0/README.md)
+  - Fixed `switchUser()` to return its promise, allowing callers to await completion before making subsequent API calls.
+
 - [5.0.0](/versions/5.0.0/README.md)
   - Enhanced DBStore SQL query construction by parameterizing dynamic values in saveToken() and setTokenInfo() to prevent unintended modifications to multiple users' token mappings.
 
@@ -86,7 +89,7 @@ For older versions, please [refer](https://github.com/zoho/zohocrm-nodejs-sdk-8.
 ## Including the SDK in your project
 You can include the SDK to your project using:
 
-For including the latest [version](https://github.com/zoho/zohocrm-nodejs-sdk-8.0/releases/tag/5.0.0) using npm
+For including the latest [version](https://github.com/zoho/zohocrm-nodejs-sdk-8.0/releases/tag/6.0.0) using npm
 
   - Install **Node** from [nodejs.org](https://nodejs.org/en/download/) (if not installed).
 
@@ -144,4 +147,4 @@ For example, if you generate the tokens for your Sandbox environment in the CN d
 > - For **Mass Convert API**, you will need to provide the **ZohoCRM.settings.fields.ALL** scope along with the **ZohoCRM.mass_convert.leads.CREATE** and **ZohoCRM.mass_convert.leads.READ** scope while generating the OAuthtoken. Otherwise, the system returns the **OAUTH-SCOPE-MISMATCH** error.
 
 ---
-For more details, kindly refer [here](/versions/5.0.0/README.md).
+For more details, kindly refer [here](/versions/6.0.0/README.md).
